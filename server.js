@@ -5,7 +5,7 @@ const PORT = process.env.PORT || 5000;
 const mongoose = require('mongoose');
 const keys = require('./config/keys');
 
-mongoose.connect(keys.mongoURI)
+mongoose.connect(keys.mongoURI);
 
 app.use(express.static('client/public'));
 app.use(express.json());
