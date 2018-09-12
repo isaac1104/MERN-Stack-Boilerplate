@@ -25,3 +25,13 @@ app.get('*', (req, res) => {
 app.listen(PORT, () => {
   console.log(`Server on PORT: ${PORT}`);
 });
+
+/*
+1. create dev.js file inside config folder.
+2. provide your credentials as an object like below.
+
+module.exports = {
+  secret: '',
+  mongoURI: ''
+}
+*/
