@@ -7,6 +7,10 @@ function generateToken(user) {
   return jwt.encode({ sub: user.id, iat: timestamp }, keys.secret);
 }
 
+exports.signin = (req, res, next) => {
+  res.send({ token: generateToken(req.user) });
+};
+
 exports.signup = function(req, res, next) {
   const { email, password } = req.body;
   if (!email || !password) {
