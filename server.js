@@ -4,6 +4,9 @@ const path = require('path');
 const PORT = process.env.PORT || 5000;
 
 app.use(express.static('client/public'));
+app.use(express.json());
+
+require('./routes/auth_route')(app);
 
 if (process.env.NODE_ENV === 'production') {
   app.use(express.static(path.resolve(__dirname, 'client', 'build')));
