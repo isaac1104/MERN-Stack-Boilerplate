@@ -4,7 +4,7 @@ class App extends Component {
   render() {
     return (
       <div>
-        <h1>Welcome to React/Redux Boilerplate with Express</h1>
+        <h1>MERN Stack Boiler Plate</h1>
       </div>
     );
   }
